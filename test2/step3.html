@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Step 3 — Services</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="logo">UF</div>
+      <div style="font-weight:700">UrbanFix</div>
+      <div style="flex:1"></div>
+      <div style="color:#888">← Back</div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="step-row">
+        <div class="step-title">Step 3 of 3</div>
+        <div style="flex:1"></div>
+        <div style="color:#888">100% Complete</div>
+      </div>
+      <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+
+      <div class="steps-indicators" style="margin-top:12px">
+        <div class="indicator active"><div class="num">1</div><div>Basic Info</div></div>
+        <div class="indicator active"><div class="num">2</div><div>Categories</div></div>
+        <div class="indicator active"><div class="num">3</div><div>Services</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Add Your Services</h2>
+      <p class="lead">Define the specific services you offer for the selected category, including pricing and estimated duration.</p>
+
+      <!-- Show selected category (read from sessionStorage) -->
+      <div id="selected-category" style="margin-bottom:12px; font-weight:600; color:#444"></div>
+
+      <div class="service">
+        <div class="service-header">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="font-size:20px">⚡</div>
+            <div style="font-weight:700">Example Service</div>
+            <div class="pill">1 service</div>
+          </div>
+          <div class="remove">Remove</div>
+        </div>
+
+        <div style="margin-bottom:10px;">
+          <div style="font-weight:700; color:#666; margin-bottom:6px">Service Title</div>
+          <input class="input" placeholder="e.g., AC Repair" />
+        </div>
+
+        <div style="margin-bottom:10px;">
+          <div style="font-weight:700; color:#666; margin-bottom:6px">Description</div>
+          <textarea placeholder="Describe what's included in this service..."></textarea>
+        </div>
+
+        <div class="inline-row" style="margin-bottom:10px;">
+          <div class="small">
+            <div style="font-weight:700; color:#666; margin-bottom:6px">Pricing Type</div>
+            <select class="input">
+              <option>Hourly Rate</option>
+              <option>Fixed Price</option>
+            </select>
+          </div>
+          <div class="flex">
+            <div style="font-weight:700; color:#666; margin-bottom:6px">Price (₹)</div>
+            <input class="input" placeholder="499" />
+          </div>
+          <div class="small">
+            <div style="font-weight:700; color:#666; margin-bottom:6px">Duration (minutes)</div>
+            <input class="input" placeholder="60" />
+          </div>
+        </div>
+
+        <div style="margin-top:8px;">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:700">Apply Offer</div>
+            <div style="font-size:14px; color:#888">toggle</div>
+          </div>
+
+          <div style="margin-top:8px;">
+            <input class="input" placeholder="Offer Title e.g., Summer Special" />
+            <div style="height:10px"></div>
+            <input class="input" placeholder="Discount Percentage (%)" />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="controls">
+        <button class="btn ghost" onclick="location.href='step2.html'">← Previous</button>
+        <button class="btn primary" onclick="alert('Registration submitted (demo)')">Submit Registration</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // show the selected category from sessionStorage
+    (function(){
+      const mapping = {
+        plumbing: '🔧 Plumbing',
+        cleaning: '🧹 Cleaning',
+        beauty: '💇‍♀️ Beauty & Wellness',
+        electrical: '⚡ Electrical',
+        carpentry: '🛠️ Carpentry',
+        painting: '🎨 Painting',
+        appliance: '📺 Appliance Repair',
+        pest: '🐜 Pest Control'
+      };
+      try{
+        const sel = sessionStorage.getItem('selectedCategory');
+        const el = document.getElementById('selected-category');
+        if(sel && mapping[sel]) el.textContent = 'Selected category: ' + mapping[sel];
+        else el.textContent = 'Selected category: — (choose on previous step)';
+      }catch(e){}
+    })();
+  </script>
+
+</body>
+</html>
