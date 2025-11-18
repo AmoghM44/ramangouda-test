@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Registration Wizard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="wizard.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">UF</div>
+      <div style="font-weight:700">UrbanFix</div>
+      <div style="flex:1"></div>
+      <div style="color:#888">← Back</div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="step-row">
+        <div class="step-title">Step 1 of 3</div>
+        <div style="flex:1"></div>
+        <div style="color:#888">33% Complete</div>
+      </div>
+      <div class="progress-bar"><div class="fill"></div></div>
+
+      <div class="steps-indicators">
+        <div class="indicator active"><div class="num">1</div><div>Basic Info</div></div>
+        <div class="indicator"><div class="num">2</div><div>Categories</div></div>
+        <div class="indicator"><div class="num">3</div><div>Services</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <!-- STEP 1 -->
+      <div class="step" id="step-1">
+        <h2>Create Your Partner Account</h2>
+        <p class="lead">Let's start with your basic information. All fields are required.</p>
+
+        <div class="form-row"><label class="form-label">Full Name *</label><input class="input" placeholder="Enter your full name"></div>
+        <div class="form-row"><label class="form-label">Email Address</label><input class="input" placeholder="your.email@example.com"></div>
+        <div class="form-row"><label class="form-label">Phone Number *</label><input class="input" placeholder="+91 XXXXX XXXXX"></div>
+        <div class="form-row"><label class="form-label">Password *</label><input class="input" type="password" placeholder="At least 8 characters"></div>
+        <div class="form-row"><label class="form-label">Confirm Password *</label><input class="input" type="password" placeholder="Re-enter your password"></div>
+
+        <div class="controls">
+          <button class="btn ghost" data-prev>← Previous</button>
+          <div>
+            <button class="btn primary" data-next>Next Step →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step" id="step-2">
+        <h2>Select Your Service Category</h2>
+        <p class="lead">Choose one primary category you provide.</p>
+
+        <div class="cat-grid">
+          <div class="cat-card" data-key="plumbing">
+            <div class="cat-emoji">🔧</div>
+            <div class="cat-title">Plumbing</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cat-card" data-key="cleaning">
+            <div class="cat-emoji">🧹</div>
+            <div class="cat-title">Cleaning</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cat-card" data-key="beauty">
+            <div class="cat-emoji">💇‍♀️</div>
+            <div class="cat-title">Beauty & Wellness</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cat-card" data-key="electrical">
+            <div class="cat-emoji">⚡</div>
+            <div class="cat-title">Electrical</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cat-card" data-key="carpentry">
+            <div class="cat-emoji">🛠️</div>
+            <div class="cat-title">Carpentry</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cat-card" data-key="painting">
+            <div class="cat-emoji">🎨</div>
+            <div class="cat-title">Painting</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cat-card" data-key="appliance">
+            <div class="cat-emoji">📺</div>
+            <div class="cat-title">Appliance Repair</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cat-card" data-key="pest">
+            <div class="cat-emoji">🐜</div>
+            <div class="cat-title">Pest Control</div>
+            <div class="checkbox" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="controls">
+          <button class="btn ghost" data-prev>← Previous</button>
+          <button class="btn primary" data-next>Next Step →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step" id="step-3">
+        <h2>Add Your Services</h2>
+        <p class="lead">Define specific services for the selected category.</p>
+
+        <div id="services-container">
+          <div class="service">
+            <div class="service-header">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div style="font-size:20px">⚡</div>
+                <div style="font-weight:700">Example Service</div>
+                <div class="pill">1 service</div>
+              </div>
+              <div class="remove">Remove</div>
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <div style="font-weight:700;color:#666;margin-bottom:6px">Service Title</div>
+              <input class="input" placeholder="e.g., AC Repair" />
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <div style="font-weight:700;color:#666;margin-bottom:6px">Description</div>
+              <textarea placeholder="Describe what's included..."></textarea>
+            </div>
+
+            <div class="inline-row" style="margin-bottom:10px;">
+              <div class="small">
+                <div style="font-weight:700;color:#666;margin-bottom:6px">Pricing Type</div>
+                <select class="input"><option>Hourly Rate</option><option>Fixed Price</option></select>
+              </div>
+              <div class="flex">
+                <div style="font-weight:700;color:#666;margin-bottom:6px">Price (₹)</div>
+                <input class="input" placeholder="499" />
+              </div>
+              <div class="small">
+                <div style="font-weight:700;color:#666;margin-bottom:6px">Duration (minutes)</div>
+                <input class="input" placeholder="60" />
+              </div>
+            </div>
+
+            <div style="margin-top:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div style="font-weight:700">Apply Offer</div>
+                <div style="font-size:14px;color:#888">toggle</div>
+              </div>
+              <div style="margin-top:8px;">
+                <input class="input" placeholder="Offer Title e.g., Summer Special" />
+                <div style="height:10px"></div>
+                <input class="input" placeholder="Discount Percentage (%)" />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- template -->
+          <div class="service service-template" style="display:none">
+            <div class="service-header">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div style="font-size:20px">🔧</div>
+                <div style="font-weight:700">New Service</div>
+                <div class="pill">0 services</div>
+              </div>
+              <div class="remove">Remove</div>
+            </div>
+            <div style="margin-bottom:10px;">
+              <div style="font-weight:700;color:#666;margin-bottom:6px">Service Title</div>
+              <input class="input" placeholder="e.g., Quick Repair" />
+            </div>
+            <div style="margin-bottom:10px;">
+              <div style="font-weight:700;color:#666;margin-bottom:6px">Description</div>
+              <textarea placeholder="Describe what's included in this service..."></textarea>
+            </div>
+            <div class="inline-row" style="margin-bottom:10px;">
+              <div class="small"><div style="font-weight:700;color:#666;margin-bottom:6px">Pricing Type</div><select class="input"><option>Hourly Rate</option><option>Fixed Price</option></select></div>
+              <div class="flex"><div style="font-weight:700;color:#666;margin-bottom:6px">Price (₹)</div><input class="input" placeholder="499" /></div>
+              <div class="small"><div style="font-weight:700;color:#666;margin-bottom:6px">Duration (minutes)</div><input class="input" placeholder="60" /></div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div style="font-weight:700">Apply Offer</div>
+                <div style="font-size:14px;color:#888">toggle</div>
+              </div>
+              <div style="margin-top:8px;">
+                <input class="input" placeholder="Offer Title e.g., Summer Special" />
+                <div style="height:10px"></div>
+                <input class="input" placeholder="Discount Percentage (%)" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="add-service">+ Add Service to Selected Category</div>
+
+        <div class="controls" style="margin-top:18px">
+          <button class="btn ghost" data-prev>← Previous</button>
+          <button class="btn primary" onclick="alert('Submit (demo)')">Submit Registration</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="wizard.js"></script>
+</body>
+</html>
